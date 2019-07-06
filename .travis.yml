@@ -1,0 +1,11 @@
+language: java
+jdk: openjdk12
+addons:
+  sonarcloud:
+    organization: "tmk2003-github"
+    token:
+      secure: "$SONAR_TOKEN"
+before_install:
+  - chmod +x gradlew
+script:
+  - ./gradlew sonarqube
